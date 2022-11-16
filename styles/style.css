@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-white text-slate-900 w-full h-full m-0 p-0;
+    font-family: "Nunito Sans", Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .section {
+    @apply 2xl:px-[25rem] lg:px-[10.3rem] px-5 py-5 sm:px-10 sm:py-10;
+  }
+  .header {
+    @apply sticky top-0 z-40 w-screen 2xl:px-[25rem] lg:px-[10.3rem] px-5 sm:px-10 py-4 bg-white shadow-md;
+  }
+  .footer-title {
+    @apply text-xl font-bold mb-6;
+  }
+  .social-icons {
+    @apply inline-block text-sm bg-gray-700 text-white leading-3 p-3 rounded-[50%] text-center w-9 h-9 hover:text-vodafone;
+  }
+  .links {
+    @apply mb-2 text-gray-300 hover:text-vodafone;
+  }
+  .scroll-target {
+    @apply content-center justify-center bg-vodafone w-12 h-12 inline-block absolute left-0 right-0 m-auto rounded-[50%] bottom-14 text-center z-[3] leading-10 hover:bg-white hover:text-vodafone;
+  }
+  .btn-primary {
+    @apply bg-vodafone hover:bg-teal-600 text-base p-4 leading-none text-white border-[1px] rounded border-solid border-vodafone hover:border-teal-600 transition-[0.5s];
+  }
+  .btn-secondary {
+    @apply bg-gray-100 hover:bg-gray-200 text-base p-4 leading-none text-gray-700 border-[1px] rounded border-solid border-gray-300 transition-[0.5s];
+  }
+  .title-header {
+    @apply 2xl:px-[25rem] lg:px-[10.3rem] px-10;
+  }
+  .category {
+    @apply absolute bg-[#354a48] top-4 left-4 transition-all z-auto p-2 flex items-center justify-center h-10 w-10 rounded-full;
+  }
+  .brand-img {
+    @apply grayscale-[1] opacity-50 hover:grayscale-0 hover:opacity-100;
+  }
+  .header-icon {
+    @apply w-6 h-6 cursor-pointer;
+  }
+  .nav-icon {
+    @apply w-6 h-6 cursor-pointer;
+  }
+  .spin-button-none::-webkit-outer-spin-button,
+  .spin-button-none::-webkit-inner-spin-button {
+    appearance: none;
+  }
+  .grid-layout {
+    @apply block h-screen;
+    @apply bg-gray-100;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas:
+      "sidebar nav nav nav"
+      "sidebar main main main";
+  }
+  .transition-all-custom {
+    transition: all .6s cubic-bezier(.785,.135,.15,.86);
+    box-shadow: -5px 0 20px -5px rgb(0 0 0 / 50%);
+  }
+  .slide1 {
+    background-image: url(/assets/images/slider/slide1.jpg);
+    background-position: initial;
+  }
+  .slide2 {
+    background-image: url(/assets/images/slider/slide5.jpg);
+    background-position: initial;
+  }
+  .slide3 {
+    background-image: url(/assets/images/slider/slide3.jpg);
+    background-position: initial;
+  }
+  .give-power {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(/assets/images/slider/slide1.jpg);
+  }
+  .give-power::before {
+    content: "";
+    background: #08133b;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .green-btn-bg {
+    font-size: 14px;
+    padding: 10px 15px;
+    transition: 0.5s;
+    line-height: 1;
+    color: #fff;
+    border: 1px solid #00a671;
+    background-color: #00a671;
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+  }
+  .light-btn-bg {
+    font-size: 14px;
+    padding: 10px 15px;
+    transition: 0.5s;
+    line-height: 1;
+    color: #000;
+    border: 1px solid #dbdbdb;
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+  }
+  .post img {
+    display: inline-block;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+  }
+  .post:hover img {
+    transform: scale(1.1);
+  }
+  .btn-animate {
+    transition: all 0.4s ease-in-out;
+  }
+  .btn-animate:before {
+    transition: all 0.3s ease-in-out;
+  }
+  .custom-btn:hover span {
+    transform: translateX(5px);
+    transition: all 0.4s ease-out 0s;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  #nprogress .bar {
+    background: #00a671 !important;
+    padding: 0 10px !important;
+    height: 3px !important;
+  }
+  #nprogress .peg {
+    box-shadow: 0 0 10px #00a671, 0 0 5px #00a671;
+  }
+  #nprogress .spinner .spinner-icon {
+    border-top-color: #00a671;
+    border-left-color: #00a671;
+  }
+  @media (max-width: 767px) {
+    .scroll-target {
+      margin: 0 0 0 auto;
+    }
+  }
+}
