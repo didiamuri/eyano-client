@@ -20,6 +20,7 @@ const AuthHeader = () => {
                                     alt="logo"
                                     className="w-12 h-auto object-cover"
                                 />
+                                <div>eyano-client</div>
                             </div>
                         </a>
                     </Link>

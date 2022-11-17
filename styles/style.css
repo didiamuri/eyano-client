@@ -142,16 +142,16 @@
     scrollbar-width: none; /* Firefox */
   }
   #nprogress .bar {
-    background: #00a671 !important;
+    background: #e60000 !important;
     padding: 0 10px !important;
     height: 3px !important;
   }
   #nprogress .peg {
-    box-shadow: 0 0 10px #00a671, 0 0 5px #00a671;
+    box-shadow: 0 0 10px #e60000, 0 0 5px #e60000;
   }
   #nprogress .spinner .spinner-icon {
-    border-top-color: #00a671;
-    border-left-color: #00a671;
+    border-top-color: #e60000;
+    border-left-color: #e60000;
   }
   @media (max-width: 767px) {
     .scroll-target {

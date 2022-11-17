@@ -64,13 +64,13 @@ const Header: FC<Props> = ({ open, setOpen }) => {
             {/* header side */}
             <div className='flex items-center space-x-3'>
               <button className='relative p-2 bg-gray-100 rounded-lg'>
-                <MdMail size={25} className='text-vodafone' />
+                <MdMail size={20} className='text-vodafone' />
                 <div className='absolute flex items-center justify-center rounded-full right-0 top-0 text-[12px] bg-red-500 text-white p-2 w-3 h-3'>
                   <span>5</span>
                 </div>
               </button>
               <button className='relative p-2 bg-gray-100 rounded-lg'>
-                <MdNotificationsActive size={25} className='text-vodafone' />
+                <MdNotificationsActive size={20} className='text-vodafone' />
                 <div className='absolute flex items-center justify-center rounded-full right-0 top-0 text-[12px] bg-red-500 text-white p-2 w-3 h-3'>
                   <span>8</span>
                 </div>
@@ -78,7 +78,7 @@ const Header: FC<Props> = ({ open, setOpen }) => {
               <div className='flex items-center justify-between sm:p-2 rounded-lg sm:hover:bg-gray-100'>
                 <Dropdown
                   label={
-                    <Avatar img='/assets/images/avatars/1.jpg' status='online' statusPosition='top-right' size="md">
+                    <Avatar img='/assets/img/avatar1.png' status='online' statusPosition='top-right' size="sm">
                       <div className='sm:flex flex-col items-start justify-start hidden'>
                         <div className='font-bold text-md m-0 p-0'>{user?.firstName?.concat(' ').concat(user?.lastName)}</div>
                         <div className='font-light text-sm text-gray-500 m-0 p-0'>Project Manager</div>

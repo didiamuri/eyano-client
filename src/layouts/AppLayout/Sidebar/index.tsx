@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { MdBugReport, MdDashboard, MdHelp, MdInventory, MdMail, MdManageAccounts, MdNotificationsActive, MdSettings, MdTopic } from 'react-icons/md'
-import { HiLightBulb } from 'react-icons/hi'
+import { MdBugReport, MdDashboard, MdHelp, MdManageAccounts, MdSettings, MdTopic } from 'react-icons/md';
+import {BsFileEarmarkPerson} from 'react-icons/bs'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import SidebarItemLink from '../SidebarItemLink'
@@ -52,37 +52,27 @@ const Sidebar: FC<Props> = ({ open, setOpen }) => {
 
   const menuItems = [
     {
-      title: "Tableau de bord",
-      icon: <MdDashboard className='nav-icon' />,
-      path: '/dashboard'
+      title: "Customer view",
+      icon: <BsFileEarmarkPerson className='nav-icon' />,
+      path: '/customer-view'
     },
     {
-      title: "Ventures",
-      icon: <HiLightBulb className='nav-icon' />,
-      path: '/my-ventures'
+      title: "GSM Customer Analysis",
+      icon: <BsFileEarmarkPerson className='nav-icon' />,
+      path: '/gsm-customer-analysis'
     },
     {
-      title: "Applications",
-      icon: <MdTopic className='nav-icon' />,
-      path: '/applications'
+      title: "Mpesa Customer Analysis",
+      icon: <BsFileEarmarkPerson className='nav-icon' />,
+      path: '/mpesa-customer-analysis'
     },
     {
-      title: "Messages",
-      icon: <MdMail className='nav-icon' />,
-      path: '/messages'
+      title: "Churn Pattern Detection",
+      icon: <BsFileEarmarkPerson className='nav-icon' />,
+      path: '/churn-pattern-detection'
     },
     {
-      title: "Notifications",
-      icon: <MdNotificationsActive className='nav-icon' />,
-      path: '/messages'
-    },
-    {
-      title: "Gestion de projets",
-      icon: <MdInventory className='nav-icon' />,
-      path: '/projects-management'
-    },
-    {
-      title: "Utilisateurs",
+      title: "Users management",
       icon: <MdManageAccounts className='nav-icon' />,
       path: '/users-management'
     },
@@ -90,17 +80,17 @@ const Sidebar: FC<Props> = ({ open, setOpen }) => {
 
   const buttonMenuItem = [
     {
-      title: "Paramètres",
+      title: "Settings",
       icon: <MdSettings className='nav-icon' />,
       path: '/settings'
     },
     {
-      title: "Aide & Support",
+      title: "Help & Support",
       icon: <MdHelp className='nav-icon' />,
       path: '/support'
     },
     {
-      title: "Signaler un problème",
+      title: "Report a bug",
       icon: <MdBugReport className='nav-icon' />,
       path: '/support'
     },
@@ -130,18 +120,18 @@ const Sidebar: FC<Props> = ({ open, setOpen }) => {
           {/* logo */}
           <Link href='/' className='block' legacyBehavior>
             <a className={`flex items-center gap-2 ${open ? 'px-5' : 'px-2 xl:px-5'}`}>
-                <img src="/assets/images/logo/logo.png" className={`hidden xl:block ${open ? 'block' : ''}`} alt="logo" />
-                <img src="/assets/images/logo/icon.png" className={`xl:hidden block ${open ? 'block xl:block' : ''} w-14 xl:w-14 xl:h-14`} alt="logo" />
+                <img src="/assets/img/logo.png" className={`hidden w-12 xl:block ${open ? 'block' : ''}`} alt="logo" />
+                <img src="/assets/img/logo.png" className={`xl:hidden w-12 block ${open ? 'block xl:block' : ''} w-14 xl:w-14 xl:h-14`} alt="logo" />
             </a>
           </Link>
         </div>
         {/* links */}
         <div className='flex flex-col flex-1 w-full py-8 space-y-5 gap-0.5'>
-          {menuItems.slice(0, 5).map((item, index) => (
+          {menuItems.slice(0, 4).map((item, index) => (
             <SidebarItemLink key={index} item={item} open={open} route={router.route} />
           ))}
           <div className='w-full border-t border-gray-400'></div>
-          {menuItems.slice(5).map((item, index) => (
+          {menuItems.slice(4).map((item, index) => (
             <SidebarItemLink key={index} item={item} open={open} route={router.route} />
           ))}
         </div>

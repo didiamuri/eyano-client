@@ -33,7 +33,7 @@ const SignInPage = () => {
       <div className='flex justify-center items-center min-h-[90vh]'>
         <div className='flex flex-col justify-between m-5 sm:m-10 w-[600px] h-[350px] sm:h-[450px] sm:shadow-default rounded bg-white'>
           <div className='border-b p-3 sm:p-7 text-center'>
-            <h1 className='text-2xl sm:text-4xl'>Log in</h1>
+            <h1 className='text-2xl sm:text-3xl'>Login your account</h1>
           </div>
           <div className='px-5 sm:px-36 py-5'>
             <form action="" className='flex flex-col gap-3'>

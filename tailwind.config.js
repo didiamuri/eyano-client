@@ -16,7 +16,7 @@ module.exports = {
         'nunito-sans': ['Nunito Sans', 'Arial', 'sans-serif']
       },
       colors: {
-        'vodafone': '#E60000',
+        'vodafone': '#e60000',
         'light-white': 'rgba(255,255,255,0.23)'
       },
       boxShadow: {
